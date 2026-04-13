@@ -1,5 +1,5 @@
 <div align="center"> <h1 align="center">🚀 Personal Hub - Marcelo Novello</h1>
-Dashboard modular desenvolvido com Vue 3, Vite e Pinia, focado na centralização de recursos estratégicos para a preparação do exame Petrobras 2026 e gestão acadêmica no IBMR. Projeto fundamentado em Screaming Architecture e Clean Code.
+Dashboard modular desenvolvido com Vue 3, Vite e Pinia, focado na centralização de recursos estratégicos para a preparação do exames e gestão acadêmica. Projeto fundamentado em Screaming Architecture e Clean Code.
 
 <p align="center">
   <a href="https://vuejs.org/">
