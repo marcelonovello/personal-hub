@@ -9,13 +9,16 @@ const authStore = useAuthStore();
 
 <template>
   <Loading v-if="authStore.isLoading" />
+  
   <div v-else class="flex flex-col min-h-screen">
     <Header />
+    
     <div class="flex-1 flex">
       <aside class="w-64 bg-zinc-900 border-r border-zinc-800 p-4">
         <Menu />
       </aside>
-      <main class="p-4">
+
+      <main class="p-4 flex-1">
         <RouterView />
       </main>
     </div>

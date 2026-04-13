@@ -5,6 +5,12 @@ body {
   color: #fff;
 }
 
+/*
+ * Abstração de Componentes UI.
+ * A diretiva @layer components do Tailwind é utilizada para agrupar utilitários
+ * repetitivos em classes semânticas. Isso mantém os templates Vue limpos (Clean HTML)
+ * e centraliza as regras de design system.
+ */
 @layer components {
   .btn {
     @apply flex justify-center items-center;
