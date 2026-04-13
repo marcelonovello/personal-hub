@@ -7,25 +7,20 @@ const authStore = useAuthStore();
 const router = useRouter();
 const route = useRoute();
 
+//Orquestra o fluxo de login e gerencia a transição de estado.
 async function handleLogin() {
   await authStore.login("marcelonovello@hotmail.com", "123456");
   redirect();
 }
 
+/**
+ * Resolve o redirecionamento pós-login.
+ * Analisa a query string para devolver o usuário à página que tentava acessar,
+ * implementando um fallback seguro para "/" para evitar falhas de navegação.
+ */
 async function redirect() {
   const q = route.query.redirect as string;
   const r = typeof q === "string" && q.startsWith("/") ? q : "/";
   await router.replace(r);
 }
 </script>
-
-<template>
-  <Loading v-if="authStore.isLoading" />
-  <div
-    v-else
-    class="flex flex-col gap-4 justify-center items-center min-h-screen"
-  >
-    <h1 class="text-4xl font-black">Auth Page</h1>
-    <button class="btn btn-primary" @click="handleLogin">Login</button>
-  </div>
-</template>

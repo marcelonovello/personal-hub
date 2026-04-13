@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import MenuItem from "./MenuItem.vue";
 
+/**
+ * Configuração centralizada da navegação lateral.
+ * Facilita a expansão do sistema: basta adicionar um novo objeto ao array 
+ * para refletir em toda a interface.
+ */
 const menuItems = [
   { label: 'Início', icon: 'pi pi-home', to: '/' }
 ];

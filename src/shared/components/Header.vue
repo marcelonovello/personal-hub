@@ -5,6 +5,11 @@ import { useRouter } from "vue-router";
 const authStore = useAuthStore();
 const router = useRouter();
 
+/**
+ * Realiza o encerramento da sessão.
+ * Invoca a store de autenticação e redireciona o usuário para a tela de login
+ * para garantir que o estado local seja limpo.
+ */
 async function handleLogout() {
   await authStore.logout();
   router.push({ name: "Auth" });
@@ -18,9 +23,9 @@ async function handleLogout() {
     <h1 class="text-xl font-black">Vue 3</h1>
     <div class="flex gap-3 items-center">
       <div class="flex flex-col items-end">
-        <span class="text-sm font-bold text-zinc-400">{{
-          authStore.user?.name
-        }}</span>
+        <span class="text-sm font-bold text-zinc-400">
+          {{ authStore.user?.name }}
+        </span>
         <span class="text-xs text-zinc-500">{{ authStore.user?.email }}</span>
       </div>
       <button class="btn btn-danger" @click="handleLogout">Sair</button>

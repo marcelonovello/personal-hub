@@ -1,4 +1,10 @@
 <script setup lang="ts">
+/**
+ * Contrato de propriedades do item de menu.
+ * @property label Texto a ser exibido.
+ * @property to Rota de destino (Vue Router).
+ * @property icon Classe de ícone (ex: PrimeIcons).
+ */
 interface MenuItemProps {
   label: string;
   to: string;
